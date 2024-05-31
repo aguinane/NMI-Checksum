@@ -2,7 +2,7 @@
 
 A library to validate National Metering Identifiers (NMIs)
 
-The validation rules are as per the [National Metering Identifier Procedure](https://aemo.com.au/Electricity/National-Electricity-Market-NEM/Retail-and-metering/-/media/EBA9363B984841079712B3AAD374A859.ashx).
+The validation rules are as per the Australian [National Metering Identifier Procedure](https://aemo.com.au/Electricity/National-Electricity-Market-NEM/Retail-and-metering/-/media/EBA9363B984841079712B3AAD374A859.ashx).
 
 ## Usage
 
