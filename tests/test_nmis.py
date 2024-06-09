@@ -8,6 +8,7 @@ EXAMPLE_CHECKSUMS = [
     ("7102000001", 7),
     ("QAAAVZZZZZ", 3),
     ("QCDWW00010", 2),
+    ("qcdww00010", 2),
     ("VKTS876510", 8),
 ]
 
