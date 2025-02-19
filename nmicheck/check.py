@@ -28,6 +28,4 @@ def checksum_valid(nmi: str) -> bool:
         checksum = int(nmi[10])
     except ValueError:
         return False  # Checksum must be an integer
-    if checksum == nmi_checksum(start):
-        return True
-    return False
+    return checksum == nmi_checksum(start)
