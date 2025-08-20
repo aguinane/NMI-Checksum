@@ -1,6 +1,6 @@
 import pytest
 
-from nmicheck import checksum_valid, nmi_checksum
+from nmicheck import nmi_checksum, nmi_checksum_valid, nmi_valid
 
 EXAMPLE_CHECKSUMS = [
     ("2001985732", 8),
@@ -24,11 +24,12 @@ def test_validate(nmi, checksum):
     """Test the checksum calculation"""
 
     full_nmi = f"{nmi}{checksum}"
-    assert checksum_valid(full_nmi)
+    assert nmi_checksum_valid(full_nmi)
+    assert nmi_valid(full_nmi) is True
 
 
 def test_bad_checksum():
     """Test the checksum fails"""
 
     full_nmi = "QAAAVZZZZZX"
-    assert not checksum_valid(full_nmi)
+    assert not nmi_checksum_valid(full_nmi)
