@@ -14,9 +14,9 @@ def long_nmi(nmi: str) -> str:
     return short + str(nmi_checksum(short))
 
 
-def obfuscate_nmi(nmi: str, salt: str = "secret", length: int = 20) -> str:
+def obfuscate_nmi(nmi: str, salt: str = "secret") -> str:
     """Make a pseudo anonymous version of the NMI"""
     clean = short_nmi(nmi)
     salted = f"{salt}-{clean}"
     nmi_hash = hashlib.sha256(salted.encode("utf-8")).hexdigest().upper()
-    return nmi_hash[:length]
+    return long_nmi(nmi_hash)
